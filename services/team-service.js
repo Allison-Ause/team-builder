@@ -13,6 +13,32 @@ export async function getTeamsWithPlayers() {
                 teamId:team_id
             )
         `);
-        console.log(response);
+
+    return checkResponse(response);
+}
+
+export async function getPlayers() {
+    const response = await client
+        .from('players')
+        .select(`
+            id,
+            name,
+            team:teams(
+                id,
+                name
+            )
+            `)
+        .order('created_at', { ascending: false });
+
+    return checkResponse(response);
+}
+
+export async function removePlayer(id) {
+    const response = await client
+        .from('players')
+        .delete()
+        .eq('id', id)
+        .single();
+
     return checkResponse(response);
 }

@@ -7,7 +7,7 @@ import createTeams from './components/Teams.js';
 // State
 let user = null;
 let teams = [];
-// let players = [];
+
 
 // Action Handlers
 async function handlePageLoad() {
@@ -15,7 +15,6 @@ async function handlePageLoad() {
     protectPage(user);
     
     teams = await getTeamsWithPlayers();
-    console.log(teams);
     display();
 }
 
