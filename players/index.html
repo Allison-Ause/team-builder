@@ -20,17 +20,38 @@
 <body>
     <header>
         <!-- <img src="./assets/html_css_js.png"> -->
-        <h1>Melee Mayhem!</h1>
+        <h1>Player Roster</h1>
         <nav>
-            <a href="./players">View Player Roster</a>
+            <a href="../">View Teams</a>
         </nav>
         <div id="user"></div>
     </header>
 
     <main>
-        <div id=teams-container>
-            <ul id="teams"></ul>
-        </div>
+        <form id="add-player">
+            <h2 class="heading">Add a Player</h2>
+            <label>
+                <span>Player Name:</span>
+                <input name="name" required></input>
+            </label>
+
+            <label>
+                <span>Team Name:</span>
+                <select name="teamId" required></select>
+            </label>
+
+            <button>Sign Player</button>
+        </form>
+
+        <table id="player-table">
+            <thead class="heading">
+                <tr>
+                    <td>Player</td>
+                    <td>Team</td>
+                </tr>
+            </thead>
+            <tbody id="players"></tbody>
+        </table>
 
     </main>
 
