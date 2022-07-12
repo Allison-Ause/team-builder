@@ -29,7 +29,7 @@ async function handleAddPlayer(playerName, teamId) {
     const player = await addPlayer(playerName, teamId);
 
     const team = await findById(teams, Number(teamId));
-    console.log(team);
+    
     player.team = team;
     players.unshift(player);
 

@@ -22,7 +22,6 @@ function Player({ player, handleRemovePlayer }) {
     name.append(h2);
 
     const team = document.createElement('td');
-    console.log(player);
     team.textContent = player.team.name;
 
     const button = document.createElement('button');

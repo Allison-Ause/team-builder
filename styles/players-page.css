@@ -1,3 +1,5 @@
+@import url('https://fonts.googleapis.com/css2?family=Maven+Pro&display=swap');
+
 
 main {
     padding: 30px;
@@ -7,22 +9,83 @@ main {
     justify-content: flex-end;
     align-items: center;
     gap: 20px;
+    font-family: 'Maven Pro', sans-serif;
+}
+
+
+h1 {
+    font-family: 'Maven Pro', sans-serif;
+}
+
+a {
+    text-decoration: none;
+    font-family: 'Maven Pro', sans-serif;
+}
+
+#roster-link {
+    display: block;
+    text-align: right;
+    margin-left: 55px;
+    background-color: #F7EDE2;
+    padding: 15px;
+    border-radius: 5%;
+    font-family: 'Maven Pro', sans-serif;
+}
+
+#add-player {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    align-items: center;
+    width: 375px;
+    padding-bottom: 25px;
+    color: black;
+    font-weight: bold;
+    border-radius: 5%;
+    border: solid 10px #F6BD60;
+    box-shadow: 5px 5px 7px #f1a121;
+    background-color: #F7EDE2;
+    font-family: 'Maven Pro', sans-serif;
+
+}
+
+#add-player-heading {
+    background-color: #F6BD60;
+    padding-bottom: 20px;
+    padding-top: 20px;
+    margin-top: 0px;
+    width: 100%;
+    text-align: center;
+    font-family: 'Maven Pro', sans-serif;
+}
+
+table {
+    border-collapse: collapse;
+    width: 400px;
+    font-family: 'Maven Pro', sans-serif;
+
+}
+
+#table-container {
+    border: 9px solid #F5CAC3;
+    box-shadow: 5px 5px 7px #f38f8d;
 }
 
 thead, .heading {
-    background: #003934;
-    color: white;
-    font-weight: normal;
+    font-weight: bold;
+    font-size: 20px;
+    border-bottom: solid 10px #F5CAC3;
 }
 
 tr:nth-child(even) {
-    background: #F7EDE2;
-}
-
-tr:nth-child(odd) {
     background: #F5CAC3;
 }
 
-td, hs {
-    padding: 7px, 30px;
+tr:nth-child(odd) {
+    background: #F7EDE2;
 }
+
+.player .delete:hover {
+    opacity: 1;
+}
+

@@ -22,14 +22,14 @@
         <!-- <img src="./assets/html_css_js.png"> -->
         <h1>Player Roster</h1>
         <nav>
-            <a href="../">View Teams</a>
+            <a href="../" class="top-link">View Teams</a>
         </nav>
         <div id="user"></div>
     </header>
 
     <main>
         <form id="add-player">
-            <h2 class="heading">Add a Player</h2>
+            <h2 id="add-player-heading">Add a Player</h2>
             <label>
                 <span>Player Name:</span>
                 <input name="name" required></input>
@@ -43,15 +43,18 @@
             <button>Sign Player</button>
         </form>
 
-        <table id="player-table">
-            <thead class="heading">
-                <tr>
-                    <td>Player</td>
-                    <td>Team</td>
-                </tr>
-            </thead>
-            <tbody id="players"></tbody>
-        </table>
+        <div id="table-container">
+            <table id="player-table">
+                <thead class="heading">
+                    <tr>
+                        <td>Player</td>
+                        <td>Team</td>
+                        <td>Terminate?</td>
+                    </tr>
+                </thead>
+                <tbody id="players"></tbody>
+            </table>
+        </div>
 
     </main>
 
