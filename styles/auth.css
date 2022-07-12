@@ -1,10 +1,18 @@
+@import url('https://fonts.googleapis.com/css2?family=Maven+Pro&display=swap');
+
+
 form {
     width: 325px;
     margin: 20px auto;
     padding: 10px 20px;
-    background: white;
+    /* background: white;
     border: 1px solid black;
-    border-radius: 3px;
+    border-radius: 3px; */
+    border-radius: 5%;
+    border: solid 10px #F6BD60;
+    box-shadow: 5px 5px 7px #f1a121;
+    background-color: #F7EDE2;
+    font-family: 'Maven Pro', sans-serif;
 }
 
 form h2 {
@@ -30,4 +38,5 @@ form label {
 .error {
     min-height: 1em;
     color: red;
+    font-family: 'Maven Pro', sans-serif;
 }
