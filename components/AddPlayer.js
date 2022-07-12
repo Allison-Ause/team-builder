@@ -24,7 +24,7 @@ export default function createAddPlayer(form, { handleAddPlayer }) {
         choose.disabled = true;
         choose.selected = true;
         choose.value = '';
-        choose.textContent = 'For Which Team?';
+        choose.textContent = 'Choose Team';
         select.append(choose);
 
         for (const team of teams) {
