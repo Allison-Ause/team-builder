@@ -1,15 +1,20 @@
 import { getUser, signOut } from './services/auth-service.js';
+import { getTeamsWithPlayers } from './services/team-service.js';
 import { protectPage } from './utils.js';
 import createUser from './components/User.js';
+import createTeams from './components/Teams.js';
 
 // State
 let user = null;
+let teams = [];
+
 
 // Action Handlers
 async function handlePageLoad() {
     user = getUser();
     protectPage(user);
-
+    
+    teams = await getTeamsWithPlayers();
     display();
 }
 
@@ -23,8 +28,11 @@ const User = createUser(
     { handleSignOut }
 );
 
+const Teams = createTeams(document.querySelector('#teams-list'));
+
 function display() {
     User({ user });
+    Teams({ teams });
 
 }
 
