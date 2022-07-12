@@ -17,6 +17,17 @@ export async function getTeamsWithPlayers() {
     return checkResponse(response);
 }
 
+export async function getTeams() {
+    const response = await client
+        .from('teams')
+        .select(`
+            id,
+            name
+        `);
+
+    return checkResponse(response);
+}
+
 export async function getPlayers() {
     const response = await client
         .from('players')
@@ -42,3 +53,24 @@ export async function removePlayer(id) {
 
     return checkResponse(response);
 }
+
+export async function addPlayer(playerName, teamId) {
+    const response = await client
+        .from('players')
+        .insert({
+            name: playerName,
+            team_id: teamId
+        })
+        .single();
+
+    const data = checkResponse(response);
+
+    if (data) {
+        data.teamId = data.team_id;
+        data.playerName = data.name;
+    }
+
+    return response.data;
+
+}
+

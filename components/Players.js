@@ -22,6 +22,7 @@ function Player({ player, handleRemovePlayer }) {
     name.append(h2);
 
     const team = document.createElement('td');
+    console.log(player);
     team.textContent = player.team.name;
 
     const button = document.createElement('button');
@@ -37,9 +38,3 @@ function Player({ player, handleRemovePlayer }) {
     return tr;
 
 }
-
-// create for/of loop to display them
-
-// add delete button to Players li creation
-
-// address form as part of append for new player data.

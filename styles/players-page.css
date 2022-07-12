@@ -1,0 +1,28 @@
+
+main {
+    padding: 30px;
+    display: flex;
+    flex-direction: row-reverse;
+    flex-wrap: wrap;
+    justify-content: flex-end;
+    align-items: center;
+    gap: 20px;
+}
+
+thead, .heading {
+    background: #003934;
+    color: white;
+    font-weight: normal;
+}
+
+tr:nth-child(even) {
+    background: #F7EDE2;
+}
+
+tr:nth-child(odd) {
+    background: #F5CAC3;
+}
+
+td, hs {
+    padding: 7px, 30px;
+}
