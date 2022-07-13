@@ -62,7 +62,7 @@ export async function addPlayer(playerName, teamId) {
             team_id: teamId
         })
         .single();
-
+        
     const data = checkResponse(response);
 
     if (data) {
@@ -74,3 +74,14 @@ export async function addPlayer(playerName, teamId) {
 
 }
 
+export async function addTeam(teamName, imageURL) {
+    const response = await client
+        .from('teams')
+        .insert({
+            name: teamName,
+            imageURL
+        })
+        .single();
+
+    return checkResponse(response);
+}

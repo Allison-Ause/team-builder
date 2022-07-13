@@ -11,35 +11,37 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link rel="stylesheet"
         href="https://fonts.googleapis.com/css2?family=Rubik:wght@300;400;600&family=Titillium+Web:wght@200;400;600&display=swap">
-    <link rel="stylesheet" href="./styles/reset.css" />
-    <link rel="stylesheet" href="./styles/main.css" />
-    <link rel="stylesheet" href="./styles/home.css" />
+    <link rel="stylesheet" href="../styles/reset.css" />
+    <link rel="stylesheet" href="../styles/main.css" />
+    <link rel="stylesheet" href="../styles/add-team-page.css" />
     <title>Melee Mayhem</title>
 </head>
 
 <body>
     <header>
-        <!-- <img src="./assets/html_css_js.png"> -->
-        <h1>Melee Mayhem!</h1>
+        <h1>Form New Team</h1>
         <nav>
-            <a href="./players-page" class="top-link">View Player Roster</a>
+            <a href="../" class="top-link">View Teams List</a>
         </nav>
         <div id="user"></div>
     </header>
 
     <main>
+        <form id="add-team-form">
+            <label>Team Name:
+                <input name="team-name" required>
+            </label>
 
-        <h1 id="second-header">Current Teams</h1>
-        <div id=teams-container>
-            <ul id="teams-list"></ul>
-        </div>
+            <label>Emblem:
+                <input type="file" name="emblem" accept="image/*">
+            </label>
+            <img class="emblem">
 
-        <nav id="add-team-button">
-            <a href="./add-team-page">Form New Team</a>
-        </nav>
+            <button>Create Team</button>
+        </form>
     </main>
 
-    <script type="module" src="app.js"></script>
+    <script type="module" src="add-team-page.js"></script>
 </body>
 
 </html>
